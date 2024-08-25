@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta - Lesswaste</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background: linear-gradient(to bottom, #088F8F, #5F8575);
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .header .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #ffffff;
+            background-color: #008080;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .header .back-button:hover {
+            background-color: #055c5c;
+        }
+
+        .account-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .account-info div {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .account-info h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        .account-info p {
+            margin: 10px 0;
+        }
+
+        .button {
+            padding: 10px;
+            font-size: 1em;
+            color: #ffffff;
+            background-color: #088F8F;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #055c5c;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <button class="back-button" onclick="window.history.back();">Volver</button>
+        <h1>Información de la Cuenta</h1>
+    </header>
+    <main class="account-info">
+        <div>
+            <h2>Información Básica</h2>
+            <p><strong>Nombre:</strong> Alejandro Castellanos</p>
+            <p><strong>Email:</strong> alejocas@gmail.com</p>
+            <p><strong>Fecha de Registro:</strong> 24 de Agosto de 2024</p>
+        </div>
+        <button class="button">Cerrar Sesión</button>
+    </main>
+</body>
+</html>
