@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesswaste</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background: linear-gradient(to bottom, #088F8F, #5F8575);
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .header .account-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #ffffff;
+            background-color: #008080;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .header .account-button:hover {
+            background-color: #055c5c;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            background: #ffffff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .tab {
+            padding: 15px 20px;
+            cursor: pointer;
+            color: #333;
+            text-decoration: none;
+            border-bottom: 3px solid transparent;
+            font-size: 1.2em;
+        }
+
+        .tab:hover {
+            background-color: #f1f1f1;
+        }
+
+        .tab.active {
+            border-bottom: 3px solid #088F8F;
+        }
+
+        .feed, .saved-recipes, .info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .recipe, .saved-recipe {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .recipe img, .saved-recipe img {
+            width: 100%;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .recipe-content, .saved-recipe-content {
+            padding: 15px;
+        }
+
+        .recipe-content h2, .saved-recipe-content h2 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .recipe-content p, .saved-recipe-content p {
+            margin: 10px 0;
+        }
+
+        .recipe-content .actions, .saved-recipe-content .actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .button {
+            padding: 10px;
+            font-size: 1em;
+            color: #333;
+            background-color: #AFE1AF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: #8CC6A2;
+        }
+
+        .comment-section {
+            margin-top: 15px;
+        }
+
+        .comment-section input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .comment-section button {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #088F8F;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .comment-section button:hover {
+            background-color: #055c5c;
+        }
+
+        .info-form {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .info-form input, .info-form select {
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .info-form .input-group {
+            margin-bottom: 15px;
+        }
+
+        .info-form .input-group input {
+            margin-right: 10px;
+        }
+
+        .info-form button {
+            padding: 10px;
+            font-size: 1em;
+            color: #ffffff;
+            background-color: #088F8F;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .info-form button:hover {
+            background-color: #055c5c;
+        }
+
+        .saved-recipes img {
+            width: 100px; /* Imagen más pequeña */
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Lesswaste</h1>
+        <a href="account.html" class="account-button">Cuenta</a>
+    </header>
+    <nav class="tabs">
+        <a href="#feed" class="tab active">Feed</a>
+        <a href="#info" class="tab">Información de alimentos</a>
+        <a href="#saved" class="tab">Recetas guardadas</a>
+    </nav>
+    <main class="feed">
+        <div class="recipe">
+            <img src="images/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg" alt="Receta">
+            <div class="recipe-content">
+                <h2>Huevos revueltos</h2>
+                <p>Los huevos revueltos son un plato sencillo y versátil que se prepara batiendo huevos y cocinándolos en una sartén a fuego medio. Durante la cocción, los huevos se revuelven continuamente para evitar que se coagulen en una sola pieza.</p>
+                <div class="actions">
+                    <button class="button">Like</button>
+                    <button class="button">Guardar</button>
+                </div>
+                <div class="comment-section">
+                    <input type="text" placeholder="Deja un comentario...">
+                    <button type="button">Comentar</button>
+                </div>
+            </div>
+        </div>
+        <!-- Repite el bloque .recipe para más recetas -->
+    </main>
+    <main class="info" id="info" style="display: none;">
+        <div class="info-form">
+            <div class="input-group">
+                <input type="text" placeholder="Nombre del alimento" required>
+                <select>
+                    <option value="">Color</option>
+                    <option value="rojo">Rojo</option>
+                    <option value="verde">Verde</option>
+                    <option value="amarillo">Amarillo</option>
+                    <option value="azul">Azul</option>
+                </select>
+                <select>
+                    <option value="">Textura</option>
+                    <option value="suave">Suave</option>
+                    <option value="crujiente">Crujiente</option>
+                    <option value="fibroso">Fibroso</option>
+                </select>
+                <input type="text" placeholder="Hace cuánto lo compraste (días)" required>
+            </div>
+            <button type="button">Ingresar</button>
+        </div>
+    </main>
+    <main class="saved-recipes" id="saved" style="display: none;">
+        <div class="saved-recipe">
+            <img src="images/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg" alt="Receta Guardada">
+            <div class="saved-recipe-content">
+                <h2>Huevos revueltos</h2>
+                <p>Los huevos revueltos son un plato sencillo y versátil que se prepara batiendo huevos y cocinándolos en una sartén a fuego medio. Durante la cocción, los huevos se revuelven continuamente para evitar que se coagulen en una sola pieza.</p>
+                <div class="actions">
+                    <button class="button">Ver</button>
+                    <button class="button">Eliminar</button>
+                </div>
+            </div>
+        </div>
+        <!-- Repite el bloque .saved-recipe para más recetas guardadas -->
+    </main>
+    <script>
+        document.querySelector('.account-button').addEventListener('click', function() {
+            window.location.href = 'account.html';
+        });
+
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('main').forEach(m => m.style.display = 'none');
+                
+                this.classList.add('active');
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).style.display = 'flex';
+            });
+        });
+    </script>
+</body>
+</html>
