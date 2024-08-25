@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión - Lesswaste</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to bottom, #088F8F, #5F8575); /* Gradiente de verde oscuro a verde más claro */
+            font-family: Arial, sans-serif;
+            color: #ffffff; /* Todas las fuentes en blanco */
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 300px; /* Ancho máximo del formulario */
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* Espacio entre los campos de formulario y el botón */
+            background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente para el formulario */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .form-container input {
+            padding: 10px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            color: #333;
+            margin-bottom: 10px; /* Espacio debajo de cada campo de entrada */
+        }
+
+        .form-container button {
+            padding: 10px;
+            font-size: 1em;
+            color: #333;
+            background-color: #AFE1AF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #8CC6A2; /* Color ligeramente más oscuro en hover */
+        }
+
+        .form-container a {
+            color: #ffffff;
+            text-decoration: underline;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Iniciar sesión</h1>
+        <div class="form-container">
+            <form action="main.html" method="get">
+                <input type="text" placeholder="Usuario" name="username" required>
+                <input type="password" placeholder="Contraseña" name="password" required>
+                <button type="submit">Iniciar sesión</button>
+            </form>
+            <a href="/register">No tienes una cuenta? Regístrate aquí.</a>
+        </div>
+    </div>
+</body>
+</html>
