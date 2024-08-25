@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a Lesswaste</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to bottom, #088F8F, #5F8575); /* Gradiente de verde oscuro a verde más claro */
+            font-family: Arial, sans-serif;
+            color: #ffffff; /* Todas las fuentes en blanco */
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        .button-container {
+            width: 100%;
+            max-width: 250px; /* Ancho máximo para los botones */
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: stretch; /* Estirar botones a lo ancho del contenedor */
+            margin: 0 auto;
+        }
+
+        .button {
+            padding: 15px;
+            font-size: 1em;
+            color: #333;
+            background-color: #AFE1AF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: block; /* Hacer que los botones sean bloques */
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: #8CC6A2;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Bienvenido a Lesswaste</h1>
+        <p>Optimiza la gestión de alimentos en el hogar.</p>
+        <div class="button-container">
+            <a href="login.html" class="button">Iniciar sesión</a>
+            <a href="register.html" class="button">Registro</a>
+        </div>
+    </div>
+</body>
+</html>
